@@ -24,11 +24,11 @@
 
 ## 安装
 
-这个项目使用[Poetry](https://python-poetry.org/)进行管理，基于Python 3.9。再安装完Poetry之后，使用`poetry install`命令安装所有依赖，使用`poetry run pytest`运行全部测试。
+这个项目使用[uv](https://docs.astral.sh/uv/)进行管理，基于Python 3.10。安装uv后，使用`uv sync --dev`命令安装所有依赖，使用`uv run python -m pytest`运行全部测试。
 
-如果你只想使用这套工具，而不想进行开发，你可以使用`poetry install --no-dev`。
+如果你只想使用这套工具，而不想进行开发，运行`uv sync`（不带`--dev`参数）。
 
-如果你没有Poetry，你需要手动安装依赖。如果你想使用`DirectoryReader`或`DirectoryWriter`，你需要安装`natsort`，用来对数字进行自然排序（1, 2, ..., 10, 11而非1, 10, 11, ..., 2）：
+如果你没有uv，你需要手动安装依赖。如果你想使用`DirectoryReader`或`DirectoryWriter`，你需要安装`natsort`，用来对数字进行自然排序（1, 2, ..., 10, 11而非1, 10, 11, ..., 2）：
 
 ```shell
 pip3 install natsort
@@ -55,7 +55,7 @@ pip3 install markdown ebooklib bs4
 
 ## 用法
 
-如果你在用Poetry，使用`poetry run cli -h`唤出可用的命令和参数。如果没有Poetry（或者在使用Poetry shell），那么你可以使用`python3 ntcli.py -h`。
+如果你在使用uv，使用`uv run python -m ntcli -h`唤出可用的命令和参数。
 
 在下载小说后，先移除任何可能存在的广告。通常有两种工作流程：
 

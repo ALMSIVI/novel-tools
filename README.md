@@ -24,11 +24,11 @@ This would result in a table of content that is incomplete and full of errors --
 
 ## Installation
 
-This project is managed by [Poetry](https://python-poetry.org/), and is built on Python 3.10. After installing Poetry, run `poetry install` to install all dependencies. Run `poetry run pytest` to run all the tests.
+This project is managed by [uv](https://docs.astral.sh/uv/), and is built on Python 3.10. After installing uv, run `uv sync --dev` to install all dependencies. Run `uv run python -m pytest` to run all the tests.
 
-If you simply want to use the toolkit without writing your extensions, you can use `poetry install --no-dev` if you have Poetry installed.
+If you simply want to use the toolkit without writing your extensions, run `uv sync` (without `--dev`).
 
-If you don't have Poetry, you will need to install the dependencies manually. If you would like to use `DirectoryReader` or `DirectoryWriter`, you would need `natsort`, which is used to sort the numbers in natural order (1, 2, ... 10, 11 instead of 1, 10, 11, ... 2):
+If you don't have uv, you will need to install the dependencies manually. If you would like to use `DirectoryReader` or `DirectoryWriter`, you would need `natsort`, which is used to sort the numbers in natural order (1, 2, ... 10, 11 instead of 1, 10, 11, ... 2):
 
 ```shell
 pip3 install natsort
@@ -55,7 +55,7 @@ The job of this toolkit is to extract the different elements within a novel file
 
 ## Usage
 
-If you are using Poetry, use `poetry run cli -h` for the list of supported commands and arguments. If you are not (or running from the Poetry shell), use `python3 ntcli.py -h`.
+If you are using uv, use `uv run python -m ntcli -h` for the list of supported commands and arguments.
 
 After you download the novel, remove all the ads first, if there are any. Typically, there are two workflows:
 
