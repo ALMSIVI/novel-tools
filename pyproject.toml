@@ -6,7 +6,7 @@ authors = [{ name = "Yue Wu", email = "wuyuejl97@gmail.com" }]
 requires-python = ">=3.10,<4"
 license = "WTFPL"
 dependencies = [
-    "pydantic>=2.0,<3",
+    "pydantic>=2.14,<3",
     "natsort>=8.4.0,<9",
     "Markdown>=3.4.3,<4",
     "beautifulsoup4>=4.12.2,<5",
